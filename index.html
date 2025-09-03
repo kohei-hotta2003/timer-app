@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
+    <!-- ページの文字コードをUTF-8に設定。文字化け防止 -->
     <title>タイマー</title>
+    <!-- 外部CSSファイルを読み込み。デザインとロジックを分離 -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- ページの主見出し -->
     <h1>タイマー</h1>
-    <p id="timer">00:00:00</p>
+
+    <!-- 
+      タイマー表示部分
+      role="timer" と aria-live を指定し、アクセシビリティを考慮
+      視覚障がい者向けスクリーンリーダーが読み上げてくれる
+    -->
+    <div id="timer" role="timer" aria-live="polite" aria-atomic="true">00:00:00</div>
+
+    <!-- 操作用ボタン群。idを付与してJSから操作可能にしている -->
     <button id="start">スタート</button>
     <button id="stop">ストップ</button>
     <button id="reset">リセット</button>
+
+    <!-- 外部JavaScriptファイルを読み込み。機能とUIを分離 -->
     <script src="script.js"></script>
   </body>
 </html>
