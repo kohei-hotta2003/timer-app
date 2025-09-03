@@ -1,19 +1,51 @@
+/* 全体の基本設定 */
 body {
-  background-color: pink;
+  background-color: #eeeeee; 
+  font-family: 'Noto Sans JP', Arial, sans-serif;
 }
 
+/* 見出しのスタイル */
+h1 {
+  color: #4E5D68; 
+  text-align: center;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+}
+
+/* タイマー表示部分 */
 #timer {
   border: 1px solid black;
   padding: 10px;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  width: 300px;
+  background-color: white;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
 }
 
+/* ボタンの基本スタイル */
 button {
   font-size: 24px;
-  margin-right: 10px;
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5D6D7E;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
 }
 
-button:disabled { opacity: .5; cursor: not-allowed; }
+/* ボタンのホバー時 */
+button:hover {
+  background-color: #7B8D9E;
+}
+
+/* 無効状態のボタン */
+button:disabled { 
+  opacity: .5; 
+  cursor: not-allowed; 
+}
